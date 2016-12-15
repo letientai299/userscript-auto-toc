@@ -1,0 +1,8 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+jquery-3.1.1.min.js
+toc.min.js
