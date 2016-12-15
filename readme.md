@@ -52,6 +52,7 @@ Bugs
 - [ ] Auto highlighted header is not works correctly.
 - [ ] CSS is override by other plugins/scripts.
 - [ ] Shortcut doesn't work if the page is not focused.
+- [ ] TOC overlap with contents
 
 
 Dev
@@ -63,3 +64,13 @@ Dev
 - [ ] Separate js, css, html.
 
 
+Notes
+-----
+
+### Setup dev and Git
+
+- Clone this repo.
+- Drag and drop the `.user.js` file to User Scripts panel in Firefox Addon page.
+- Open the file location. You can locate it by try _Edit this Userscript_ feature.
+- Remove the folder.
+- Make symlink in that folder with the deleted folder name to this repo location (we can do that even on Windows).
