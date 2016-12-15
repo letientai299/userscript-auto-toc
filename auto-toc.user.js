@@ -8,6 +8,7 @@
 // @require   https://code.jquery.com/jquery-3.1.1.min.js
 // @require   https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
 // @grant     GM_addStyle
+// @run-at    document-idle
 // @noframes
 // ==/UserScript==
 
@@ -40,10 +41,27 @@ let isOnIncludedSites = function (location) {
  * Keep track of TOC displaying status
  */
 var isTocDisplaying = true;
+let bodyElement = $("body");
+let tocPadding = 10;
+let bodyOriginalMargin = parseInt(bodyElement.css("margin-left"), 10);
+
+let updateBodyMargin = function () {
+  let tocWidth = parseInt(getToc().css("width"), 10);
+
+  let bodyNewMargin = isTocDisplaying ?
+    tocWidth + bodyOriginalMargin + tocPadding :
+    bodyOriginalMargin;
+  console.log(bodyNewMargin, "px");
+  bodyElement.css("margin-left", `${bodyNewMargin}px`);
+}
 
 let setTocDisplayMode = function (isDisplay) {
   let cssDisplay = isDisplay ? "block" : "none";
   getToc().css("display", cssDisplay);
+  // This trick make the updateBodyMargin be executed right after browser
+  // completely render the element with all css.
+  // See http://stackoverflow.com/a/21043017/3869533
+  setTimeout(updateBodyMargin, 0)
 }
 
 let toggleToc = function () {
@@ -54,7 +72,7 @@ let toggleToc = function () {
 /**
  * Build the TOC using jquery and toc plugin.
  */
-$("body").append(`<div id=\"${tocId}\"></div>`);
+bodyElement.append(`<div id=\"${tocId}\"></div>`);
 let tocConfig = {
   'selectors': 'h1,h2,h3,h4,h5', //elements to use as headings
 }
@@ -77,13 +95,12 @@ document.addEventListener('keydown', function (e) {
   }
 }, false);
 
-
 GM_addStyle(`
 
 #${tocId} {
   display: none;
   float: left;
-  overflow: auto;
+  overflow-y: auto;
   resize: horizontal;
   top: 0px;
   left: 0px;
@@ -92,7 +109,7 @@ GM_addStyle(`
   background: #222;
   box-shadow: inset -5px 0 5px 0px #000;
   width: 200px;
-  max-width: 200px;
+  max-width: 400px;
   padding-top: 80px;
   color: #fff !important;
   z-index: 99999;
