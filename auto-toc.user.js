@@ -16,6 +16,10 @@
  */
 let tocId = "minetoc"
 
+let getToc = function () {
+  return $(`#${tocId}`);
+}
+
 let includedSitePatterns = [
   /.*.wiki.*\/.*/,
   /.*medium.com\/.*/,
@@ -39,7 +43,7 @@ var isTocDisplaying = true;
 
 let setTocDisplayMode = function (isDisplay) {
   let cssDisplay = isDisplay ? "block" : "none";
-  $(`#${tocId}`).css("display", cssDisplay);
+  getToc().css("display", cssDisplay);
 }
 
 let toggleToc = function () {
@@ -51,9 +55,11 @@ let toggleToc = function () {
  * Build the TOC using jquery and toc plugin.
  */
 $("body").append(`<div id=\"${tocId}\"></div>`);
-$(`#${tocId}`).toc({
+let tocConfig = {
   'selectors': 'h1,h2,h3,h4,h5', //elements to use as headings
-});
+}
+
+getToc().toc(tocConfig);
 
 if (isOnIncludedSites(window.location)) {
   isTocDisplaying = true;
@@ -73,6 +79,7 @@ document.addEventListener('keydown', function (e) {
 
 
 GM_addStyle(`
+
 #${tocId} {
   display: none;
   float: left;
