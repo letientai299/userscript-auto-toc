@@ -1,15 +1,20 @@
 // ==UserScript==
 // @name    Auto TOC
-// @namespace   mine
-// @include   https://*/*
-// @include   http://*/*
-// @include   file://*
-// @version   1
-// @require   https://code.jquery.com/jquery-3.1.1.min.js
-// @require   https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
-// @grant     GM_addStyle
-// @run-at    document-idle
+// @namespace   letientai299
+// @author      Le Tien Tai
+// @description Auto create a fixed table of content on any site.
+// @include     https://*/*
+// @include     http://*/*
+// @include     file://*
+// @version     1
+// @require     https://code.jquery.com/jquery-3.1.1.min.js
+// @require     https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
+// @grant       GM_addStyle
+// @run-at      document-idle
 // @noframes
+// @version     0.0.1
+// @date        2016-12-15
+// @license MIT License
 // ==/UserScript==
 
 /**
