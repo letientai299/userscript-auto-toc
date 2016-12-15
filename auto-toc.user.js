@@ -56,7 +56,6 @@ let updateBodyMargin = function () {
   let bodyNewMargin = isTocDisplaying ?
     tocWidth + bodyOriginalMargin + tocPadding :
     bodyOriginalMargin;
-  console.log(bodyNewMargin, "px");
   bodyElement.css("margin-left", `${bodyNewMargin}px`);
 }
 
