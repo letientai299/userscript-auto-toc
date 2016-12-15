@@ -8,6 +8,7 @@
 // @require   https://code.jquery.com/jquery-3.1.1.min.js
 // @require   https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
 // @grant     GM_addStyle
+// @noframes
 // ==/UserScript==
 
 /**

@@ -47,7 +47,7 @@ Enhancements
 Bugs
 ----
 
-- [ ] TOC show on all `body` tags, include one under `iframe`
+- [x] TOC show on all `body` tags, include one under `iframe`
 - [ ] TOC show also the hidden elements, when use with Stylish custom style.
 - [ ] Auto highlighted header is not works correctly.
 - [ ] CSS is override by other plugins/scripts.
