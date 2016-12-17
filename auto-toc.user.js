@@ -112,8 +112,8 @@ GM_addStyle(`
   position: fixed;
   background: #222;
   box-shadow: inset -5px 0 5px 0px #000;
-  width: 200px;
-  max-width: 400px;
+  width: 300px;
+  max-width: 600px;
   padding-top: 80px;
   color: #fff !important;
   z-index: 99999;
