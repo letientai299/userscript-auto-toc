@@ -41,7 +41,8 @@ Enhancements
 - [ ] Movable (floating mode)
 - [ ] Left/Right
 - [ ] TOC search
-- [ ] Integrate with VimFx mark and `g[`, `g]` features
+- [ ] Integrate with VimFx mark and `g[`, `g]` features.
+- [ ] Should remember the last status (show/hide, width) for a specific site.
 
 
 Bugs
