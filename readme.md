@@ -53,6 +53,7 @@ Bugs
 - [ ] CSS is override by other plugins/scripts.
 - [ ] Shortcut doesn't work if the page is not focused.
 - [ ] TOC overlap with contents
+- [ ] TOC not updated when open other article within the current page.
 
 
 Dev
