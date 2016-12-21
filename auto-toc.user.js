@@ -1,20 +1,22 @@
 // ==UserScript==
-// @name    Auto TOC
+//
+// @name        Auto TOC
 // @namespace   letientai299
 // @author      Le Tien Tai
-// @description Auto create a fixed table of content on any site.
+// @description Add a Table of Content on any site. Toggleable with Alt+q short cut.
 // @include     https://*/*
 // @include     http://*/*
 // @include     file://*
-// @version     1
 // @require     https://code.jquery.com/jquery-3.1.1.min.js
 // @require     https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
 // @grant       GM_addStyle
 // @run-at      document-idle
 // @noframes
-// @version     0.0.1
-// @date        2016-12-15
-// @license MIT License
+// @version     0.0.2
+// @updateURL   https://raw.githubusercontent.com/letientai299/userscript-auto-toc/master/auto-toc.user.js
+// @downloadURL https://raw.githubusercontent.com/letientai299/userscript-auto-toc/master/auto-toc.user.js
+// @license     MIT License
+//
 // ==/UserScript==
 
 /**
