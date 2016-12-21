@@ -12,7 +12,7 @@
 // @grant       GM_addStyle
 // @run-at      document-idle
 // @noframes
-// @version     0.0.2
+// @version     0.0.3
 // @updateURL   https://raw.githubusercontent.com/letientai299/userscript-auto-toc/master/auto-toc.user.js
 // @downloadURL https://raw.githubusercontent.com/letientai299/userscript-auto-toc/master/auto-toc.user.js
 // @license     MIT License
@@ -20,7 +20,7 @@
 // ==/UserScript==
 
 /**
- * ID of the TOC element.
+ * ID of the TOC element. Used for css class prefix also.
  */
 let tocId = "minetoc"
 
