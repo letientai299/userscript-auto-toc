@@ -83,7 +83,7 @@ let tocConfig = {
 
 getToc().toc(tocConfig);
 
-if (isOnIncludedSites(window.location)) {
+if (isOnIncludedSites(window.location.href)) {
   isTocDisplaying = true;
   setTocDisplayMode(isTocDisplaying);
 }
