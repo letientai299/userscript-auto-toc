@@ -3,8 +3,8 @@ Auto Table of Content
 
 I believe that every article on web should have a table of content.
 
-> This userscript is not production-ready yet. There's a lot of improment
-> points. See [TODO list](https://github.com/letientai299/userscript-auto-toc/issues/1).
+> This userscript is not production-ready yet. There's many improvement points.
+> See [TODO list](https://github.com/letientai299/userscript-auto-toc/issues/1).
 
 
 Demo
