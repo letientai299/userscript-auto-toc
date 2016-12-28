@@ -1,78 +1,64 @@
-TODO
-=====
+Auto Table of Content
+=====================
+
+I believe that every article on web should have a table of content.
+
+> This userscript is not production-ready yet. There's a lot of improment
+> points. See [TODO list](https://github.com/letientai299/userscript-auto-toc/issues/1).
 
 
-Doc
----
-
-- [ ] Write proper Readme.
-- [ ] Document source code.
-
-
-Marketing
----------
-
-- [ ] Make a github.io page for this.
-- [ ] Write a post about how to make the basis of this plugins
-- [ ] Upload on OpenUserJS, Userscript...
-- [ ] Post to Hacker News.
-- [ ] Post to Twitter
-- [ ] Clean up junk in my Github Profiles
-- [ ] Share to friends for testing
-
-
-Enhancements
-------------
-
-- [ ] Should be only enable on some sites. Should have shortcut to add site.
-- [ ] Icons, animations.
-- [ ] Better Article detections
-- [ ] Custom shortcut key
-- [ ] Expand, Close
-- [ ] More shortcut keys: Zooms, Search, Next, Back, Expand, Close
-- [ ] Custom css
-- [ ] More default style
-- [ ] Settings page
-- [ ] Sync settings with Firefox/Google profiles
-- [ ] Make it an standalone addon, not depend on Greasemonkey.
-- [ ] Test on other user script engines.
-- [ ] Test on other browser.
-- [ ] Resizable
-- [ ] Movable (floating mode)
-- [ ] Left/Right
-- [ ] TOC search
-- [ ] Integrate with VimFx mark and `g[`, `g]` features.
-- [ ] Should remember the last status (show/hide, width) for a specific site.
-
-
-Bugs
+Demo
 ----
 
-- [x] TOC show on all `body` tags, include one under `iframe`
-- [ ] TOC show also the hidden elements, when use with Stylish custom style.
-- [ ] Auto highlighted header is not works correctly.
-- [ ] CSS is override by other plugins/scripts.
-- [ ] Shortcut doesn't work if the page is not focused.
-- [ ] TOC overlap with contents
-- [ ] TOC not updated when open other article within the current page.
+TOC on Github
+
+![TOC on Github](./demo/firefox-github.gif)
 
 
-Dev
----
-
-- [ ] Auto test
-- [ ] Auto reload
-- [ ] npm setup
-- [ ] Separate js, css, html.
+More:
+- [Medium](./demo/firefox-medium.jpg)
+- [Wikipedia](./demo/firefox-wikipedia-normal.jpg)
+- [Wikipedia custom theme](./demo/firefox-wikipedia-stylish-wikitex.jpg) with the awesome
+ [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/?src=hp-dl-featured) theme [WikiTex](https://github.com/AndrewBelt/WiTeX)
 
 
-Notes
------
 
-### Setup dev and Git
 
-- Clone this repo.
-- Drag and drop the `.user.js` file to User Scripts panel in Firefox Addon page.
-- Open the file location. You can locate it by try _Edit this Userscript_ feature.
-- Remove the folder.
-- Make symlink in that folder with the deleted folder name to this repo location (we can do that even on Windows).
+How to use
+----------
+
+### Install
+
+- Choose a userscript engine for your favorist browser:
+  - Greasemonkey: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+  - Tampermonkey: [Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en), [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), [Opera](https://addons.opera.com/en/extensions/details/tampermonkey-beta/?display=en)
+  - ViolentMonkey: [Opera](https://addons.opera.com/en/extensions/details/violent-monkey/),
+    [Chrome](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag/reviews?hl=en)
+
+- Install script via [this link](https://cdn.rawgit.com/letientai299/userscript-auto-toc/master/auto-toc.user.js).
+
+
+### Usage
+
+- Open a Github, Wikipedia or Medium article, the TOC should be opened
+  automatically after page is loaded. For example, try with
+  [this page](https://github.com/jwasham/google-interview-university):
+
+- TOC can be toggle using the shortcut key `Alt+q`.
+
+### Show TOC on Firefox Markdown Previewer
+-------------------------------------------
+
+This feature only works properly on Firefox with
+[Markdown Previewer](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer/) as of now. See [demo](./demo/firefox-markdown-preview-addon.jpg)
+
+- Open `about:config`.
+- Look for `greasemonkey.fileIsGreaseable`, set to `true`.
+- Restart Firefox.
+- Try with any local Markdown file.
+
+
+License
+-------
+
+MIT
