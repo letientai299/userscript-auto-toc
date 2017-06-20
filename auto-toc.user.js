@@ -8,7 +8,7 @@
 // @include     http://*/*
 // @include     file://*
 // @require     https://code.jquery.com/jquery-3.1.1.min.js
-// @require     https://raw.githubusercontent.com/jgallen23/toc/master/dist/toc.min.js
+// @require     https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js
 // @grant       GM_addStyle
 // @run-at      document-idle
 // @noframes
@@ -24,7 +24,7 @@
  */
 let tocId = "minetoc"
 
-let getToc = function () {
+let getToc = function() {
   return $(`#${tocId}`);
 }
 
@@ -38,7 +38,7 @@ let includedSitePatterns = [
 /**
  * Test whehter the website location is excluded by default (TOC won't displaying).
  */
-let isOnIncludedSites = function (location) {
+let isOnIncludedSites = function(location) {
   return includedSitePatterns.some((pattern) => {
     return pattern.test(location)
   })
@@ -52,7 +52,7 @@ let bodyElement = $("body");
 let tocPadding = 10;
 let bodyOriginalMargin = parseInt(bodyElement.css("margin-left"), 10);
 
-let updateBodyMargin = function () {
+let updateBodyMargin = function() {
   let tocWidth = parseInt(getToc().css("width"), 10);
 
   let bodyNewMargin = isTocDisplaying ?
@@ -61,7 +61,7 @@ let updateBodyMargin = function () {
   bodyElement.css("margin-left", `${bodyNewMargin}px`);
 }
 
-let setTocDisplayMode = function (isDisplay) {
+let setTocDisplayMode = function(isDisplay) {
   let cssDisplay = isDisplay ? "block" : "none";
   getToc().css("display", cssDisplay);
   // This trick make the updateBodyMargin be executed right after browser
@@ -70,7 +70,7 @@ let setTocDisplayMode = function (isDisplay) {
   setTimeout(updateBodyMargin, 0)
 }
 
-let toggleToc = function () {
+let toggleToc = function() {
   isTocDisplaying = !isTocDisplaying;
   setTocDisplayMode(isTocDisplaying);
 }
@@ -93,7 +93,7 @@ if (isOnIncludedSites(window.location.href)) {
 /**
  * Add shortcut to toggle the TOC
  */
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', function(e) {
 
   // Alt+q
   if (e.keyCode == 81 && !e.shiftKey && !e.ctrlKey && e.altKey && !e.metaKey) {
@@ -101,7 +101,8 @@ document.addEventListener('keydown', function (e) {
   }
 }, false);
 
-GM_addStyle(`
+GM_addStyle(
+  `
 
 #${tocId} {
   display: none;
@@ -167,4 +168,5 @@ GM_addStyle(`
   background: #336699;
   box-shadow: inset -5px 0px 10px -5px #000;
 }
-`);
+`
+);
